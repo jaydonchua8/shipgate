@@ -1,0 +1,17 @@
+{
+  "_comment": "Example account configuration (synthetic). SafetyKit's docs say label ids, policy ids and verdict values are configured per account, so this mapping has to be supplied by whoever runs the gate.",
+  "label_to_policy": {
+    "policy.counterfeit": "counterfeit",
+    "policy.dropship": "dropship",
+    "policy.hazmat": "hazmat",
+    "policy.ip_violation": "ip",
+    "policy.recalled_product": "recalled",
+    "policy.adult_content": "adult"
+  },
+  "violating_decisions": ["violation"],
+  "benign_decisions": ["no_violation"],
+  "agent_type_priority": ["policy_expert", "appeal", "bpo_review"],
+  "min_candidate_coverage": 0.98,
+  "margins": {"false_positive": 0.02, "miss": 0.05},
+  "alpha": 0.05
+}
